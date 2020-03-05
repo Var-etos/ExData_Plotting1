@@ -21,10 +21,6 @@ DFnew<-DF[DF$Date=="2007/02/01" | DF$Date== "2007/02/02",]
 
 DFnew$Global_active_power<-as.numeric(DFnew$Global_active_power)
 
-png(file="plot2.png",height = 450,width = 450)
-plot(DFnew$datetime,DFnew$Global_active_power,ylab = "Global Active Power (kilowatts)",xlab="",type = "l")
-dev.off()
-
 png(file="plot3.png",height = 450,width = 450)
 plot(DFnew$datetime,DFnew$Sub_metering_1,xlab = "",ylab ="Energy sub metering",type="l")
 points(DFnew$datetime,DFnew$Sub_metering_2,col="red",type="l")
